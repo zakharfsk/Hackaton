@@ -12,4 +12,4 @@ def timer(time):
     return time + 1
 
 eel.init('web')
-eel.start('index.html', size = (700, 700), block = False)
+eel.start('index.html', size = (700, 700))
