@@ -1,0 +1,87 @@
+html{
+    font-family: serif;
+    font-size: 20px;
+    color: #142f43;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #ffab4c;
+}
+a{
+    text-decoration: none;
+    color: #142f43;
+    padding-bottom: 5px;
+    transition: all .3s ease;
+}
+a:hover{
+    color: #fff;
+    border-bottom: 1px solid #142f43;
+}
+header{
+    border-bottom: 2px solid #142f43;
+    margin-bottom: 75px;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 80%;
+}
+header .wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+main div{
+    padding: 5px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+main .wrapper{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.title-exercise{
+    margin-bottom: 50px;
+}
+.start-btm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    color: #ffab4c;
+    background: #142f43;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.start-btm:hover{
+   transform: scale(1.1);
+}
+article{
+    margin-bottom: 25px;
+    transition: all .3s ease;
+}
+article:hover{
+    transform: scale(1.025);
+ }
+article span{
+    display: flex;
+    justify-content: space-around;
+}
+.exercise-title h2{
+    margin: 0;
+}
+.exercise-description{
+    padding: 0;
+    margin-right: 15px;
+}
+.exercise-description p{
+    margin: 0;
+}
+.exercise-img span{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background: #142f43;
+}
