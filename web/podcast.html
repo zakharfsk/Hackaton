@@ -131,5 +131,28 @@
     </div>
     <script type = "text/javascript" src = "js/index.js"></script>
     <script type = "text/javascript" src = "js/jquery-3.5.1.min.js"></script>
+
+    <script>
+
+        // functions for get info and path podcast site
+        async function GetAllAudios() {
+            return await eel.audiosstore()();
+        }
+
+        async function GetPathAudios() {
+            return await eel.path_audios()();
+        }
+
+        (async function Audios(){
+            let audios = await GetAllAudios();
+            console.log(audios); //тут пишете скріпт який буде вставляти інфу
+        })();
+
+        (async function PathAudios(){
+            let paths = await GetPathAudios();
+            console.log(paths); //тут пишете скріпт який буде вставляти інфу
+        })();
+    </script>
+
 </body>
 </html>

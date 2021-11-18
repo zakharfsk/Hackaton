@@ -7,7 +7,7 @@
     <title>Site</title>
     <link rel="stylesheet" href="css/style.css"> 
     <link rel="shortcut icon" href="img/logo-ico.ico" type="image/x-icon">
-    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="./eel.js"></script>
 
 </head>
 <body>
@@ -59,7 +59,7 @@
         $(".drop-list").css("opacity","0");
         $(".li-menu").css("opacity","0");
     }
-    
+
     </script>
     <main>
         <article class="book-article good-page">
@@ -130,5 +130,29 @@
     </div>
     <script type = "text/javascript" src = "js/index.js"></script>
     <script type = "text/javascript" src = "js/jquery-3.5.1.min.js"></script>
+
+    <script>
+
+        // functions for get info and path books site
+        async function GetAllBooks() {
+            return await eel.bookstore()();
+        }
+
+        async function GetPathPhoto() {
+            return await eel.path_photos_books()();
+        }
+
+        (async function Books(){
+            let books = await GetAllBooks();
+            console.log(books);
+        })(); //тут пишете скріпт який буде вставляти інфу
+
+        (async function PathBooks(){
+            let paths = await GetPathPhoto();
+            console.log(paths);
+        })(); //тут пишете скріпт який буде вставляти інфу
+
+    </script>
+
 </body>
 </html>

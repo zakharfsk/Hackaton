@@ -1,19 +1,30 @@
 import eel
+from modules.audios import ShelfAudios
+from modules.books import ShelfBooks
 
-settings = {
-    'mode': "chrome", #or "chrome-app",
-    'host': 'localhost',
-    'port': 8080,
-    'chromeFlags': ["--start-fullscreen", "--browser-startup-dialog"]
-}
+books = ShelfBooks()
+audios = ShelfAudios()
 
 @eel.expose
-def get_time(time):
-    print(time)
+def bookstore():
+    return books.get_books_info()
+
 
 @eel.expose
-def timer(time):
-    return time + 1
+def path_photos_books():
+    return books.get_photos_path()
+
+
+@eel.expose
+def audiosstore():
+    return audios.get_auidos_info()
+
+
+@eel.expose
+def path_audios():
+    return audios.get_path_audios()
+
+
 
 eel.init('web')
-eel.start('index.html', size = (700, 700), mode = 'chrome', cmdline_args = ['--browser-startup-dialog'])
+eel.start('index.html', size = (700, 700), mode = 'chrome')

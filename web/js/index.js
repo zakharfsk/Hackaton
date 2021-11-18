@@ -18,8 +18,8 @@ function scrollBottom(){
     }
 }
 function scrollTop(){
-    window.scrollTo(0, window.pageYOffset - 5);
-
+    window.scrollTo(0, window.pageYOffset - 10);
+    console.log(window.pageYOffset);
     if(window.pageYOffset <= 0){
         return false;
     }else{
